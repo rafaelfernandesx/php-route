@@ -1,0 +1,7 @@
+# Switch the rewrite engine on
+RewriteEngine On
+# If it's not a directory or a file...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+# Send all requests to the Front Controller
+RewriteRule ^ index.php [L]
