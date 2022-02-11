@@ -14,16 +14,22 @@ class Route
     protected string $method;
     // The URI the route responds to.
     protected string $path;
+    // middleware to exectute before handle.
+    protected ?Closure $middleware;
     // Create a new Route instance.
-    public function __construct(string $method, string $path, Closure $handler)
+    public function __construct(string $method, string $path, Closure $handler, ?Closure $middleware)
     {
         $this->handler = $handler;
         $this->method = $method;
         $this->path = $path;
+        $this->middleware = $middleware;
     }
     // Run the route action.
     public function handle(Request $request, Response $response): void
     {
+        if ($this->middleware) {
+            call_user_func_array($this->middleware, [$request]);
+        }
         call_user_func_array($this->handler, [$request, $response]);
     }
     // Get the HTTP method the route responds to.

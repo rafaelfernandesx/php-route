@@ -20,7 +20,7 @@ class Response
         $this->send();
     }
     // Send the response.
-    public function send(string $type = 'TEXT'): void
+    public function send(string $type = 'JSON'): void
     {
         http_response_code($this->statusCode);
         foreach ($this->headers as $name => $value) {
@@ -32,6 +32,9 @@ class Response
         switch ($type) {
             case 'JSON':
                 header('Content-Type: application/json');
+                break;
+            default:
+                header('Content-Type: text/html');
                 break;
         }
         echo $this->body;

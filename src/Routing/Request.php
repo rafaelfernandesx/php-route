@@ -74,4 +74,16 @@ class Request
     {
         return $this->protocol;
     }
+
+    // Get a value from $_ENV var.
+    public function getEnv(string$key): mixed
+    {
+        return $_ENV[$key] ?? null;
+    }
+
+    // Set a value on $_ENV var.
+    public function setEnv(string $key, mixed $value): void
+    {
+        $_ENV[$key] = $value;
+    }
 }

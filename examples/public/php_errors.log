@@ -1,0 +1,12 @@
+[02-Feb-2022 17:36:59 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Routing\Router::notFound() in /home/rafael/PROJETOS/apidozero/examples/public/index.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/rafael/PROJETOS/apidozero/examples/public/index.php on line 38
+[02-Feb-2022 17:55:57 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: Routing\Response::body(): Argument #1 ($body) must be of type string, array given, called in /home/rafael/PROJETOS/apidozero/examples/public/index.php on line 39 and defined in /home/rafael/PROJETOS/apidozero/src/Routing/Response.php:44
+Stack trace:
+#0 /home/rafael/PROJETOS/apidozero/examples/public/index.php(39): Routing\Response->body()
+#1 [internal function]: {closure}()
+#2 /home/rafael/PROJETOS/apidozero/src/Routing/Router.php(40): call_user_func_array()
+#3 /home/rafael/PROJETOS/apidozero/examples/public/index.php(43): Routing\Router->dispatch()
+#4 {main}
+  thrown in /home/rafael/PROJETOS/apidozero/src/Routing/Response.php on line 44
