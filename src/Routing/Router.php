@@ -1,6 +1,6 @@
 <?php
 
-namespace Routing;
+namespace RRoute\Routing;
 
 use Closure;
 
@@ -55,7 +55,7 @@ class Router
     // Register a notFound route with the router.
     public function notFound(Closure $handler, ?Closure $middleware = null): self
     {
-        $this->notFound = ['handler'=>$handler, 'middleware'=>$middleware];
+        $this->notFound = ['handler' => $handler, 'middleware' => $middleware];
         return $this;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Routing;
+namespace RRoute\Routing;
 
 class Request
 {
@@ -76,7 +76,7 @@ class Request
     }
 
     // Get a value from $_ENV var.
-    public function getEnv(string$key): mixed
+    public function getEnv(string $key): mixed
     {
         return $_ENV[$key] ?? null;
     }

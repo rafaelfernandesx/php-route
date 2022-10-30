@@ -1,9 +1,10 @@
 <?php
 
-require __DIR__.'/JWT.php';
+require __DIR__ . '/JWT.php';
 
-use Interface\PiraRouteMiddleware;
-use Routing\Request;
+
+use RRoute\Interfaces\PiraRouteMiddleware;
+use RRoute\Routing\Request;
 
 class AuthMiddleware implements PiraRouteMiddleware
 {

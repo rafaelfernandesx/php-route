@@ -4,8 +4,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Routing\\": "src/Routing/",
-            "Interface\\": "src/Interface/"
+            "RRoute\\": "src/"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Routing;
+namespace RRoute\Routing;
 
 use Closure;
 

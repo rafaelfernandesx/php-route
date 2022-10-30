@@ -1,12 +1,12 @@
-[02-Feb-2022 17:36:59 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Routing\Router::notFound() in /home/rafael/PROJETOS/apidozero/examples/public/index.php:38
+[30-Oct-2022 04:03:33 UTC] PHP Warning:  require_once(D:\Usuario\Documents\PROJECTS\PHP\php-route\examples\public/../../vendor/autoload.php): Failed to open stream: No such file or directory in D:\Usuario\Documents\PROJECTS\PHP\php-route\examples\public\index.php on line 4
+[30-Oct-2022 04:03:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Usuario\Documents\PROJECTS\PHP\php-route\examples\public/../../vendor/autoload.php' (include_path='.;C:\php\pear') in D:\Usuario\Documents\PROJECTS\PHP\php-route\examples\public\index.php:4
 Stack trace:
 #0 {main}
-  thrown in /home/rafael/PROJETOS/apidozero/examples/public/index.php on line 38
-[02-Feb-2022 17:55:57 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: Routing\Response::body(): Argument #1 ($body) must be of type string, array given, called in /home/rafael/PROJETOS/apidozero/examples/public/index.php on line 39 and defined in /home/rafael/PROJETOS/apidozero/src/Routing/Response.php:44
+  thrown in D:\Usuario\Documents\PROJECTS\PHP\php-route\examples\public\index.php on line 4
+[30-Oct-2022 04:05:06 UTC] PHP Fatal error:  Declaration of AuthMiddleware::handler(RRoute\Routing\Request $request) must be compatible with RRoute\Interfaces\PiraRouteMiddleware::handler(RRoute\Routing\Request $request): void in D:\Usuario\Documents\PROJECTS\PHP\php-route\examples\src\AuthMiddleware.php on line 12
+[30-Oct-2022 04:07:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function RRoute\Routing\apache_request_headers() in D:\Usuario\Documents\PROJECTS\PHP\php-route\src\Routing\Request.php:26
 Stack trace:
-#0 /home/rafael/PROJETOS/apidozero/examples/public/index.php(39): Routing\Response->body()
-#1 [internal function]: {closure}()
-#2 /home/rafael/PROJETOS/apidozero/src/Routing/Router.php(40): call_user_func_array()
-#3 /home/rafael/PROJETOS/apidozero/examples/public/index.php(43): Routing\Router->dispatch()
-#4 {main}
-  thrown in /home/rafael/PROJETOS/apidozero/src/Routing/Response.php on line 44
+#0 D:\Usuario\Documents\PROJECTS\PHP\php-route\src\Routing\Router.php(19): RRoute\Routing\Request->__construct()
+#1 D:\Usuario\Documents\PROJECTS\PHP\php-route\examples\public\index.php(43): RRoute\Routing\Router->dispatch()
+#2 {main}
+  thrown in D:\Usuario\Documents\PROJECTS\PHP\php-route\src\Routing\Request.php on line 26

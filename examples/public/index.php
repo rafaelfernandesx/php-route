@@ -6,7 +6,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 require_once '../src/AuthMiddleware.php';
 
 // First of all, we should create a Router instance.
-$router = new Routing\Router;
+$router = new RRoute\Routing\Router;
 // The instance is empty. We need to register routes.
 // We will register the only one route that responds to '/' URI
 // and the 'GET' HTTP request method. It means if the server
